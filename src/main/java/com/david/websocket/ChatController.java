@@ -10,7 +10,6 @@ import java.util.Date;
 @Controller
 public class ChatController {
 
-    @MessageMapping("/location")
     @SendTo("/topic/location")
     public OutputMessage send(final Message message) throws Exception {
         final String time = new SimpleDateFormat("HH:mm").format(new Date());
